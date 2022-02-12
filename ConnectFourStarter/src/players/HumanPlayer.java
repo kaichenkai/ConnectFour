@@ -1,0 +1,46 @@
+package players;
+
+import interfaces.IModel;
+import interfaces.IPlayer;
+import static util.InputUtil.readIntFromUser;
+
+/**
+ * Implementing this player is a basic task.
+ * See assignment instructions for what to do.
+ * There are also helpful comments in this file (which you can remove).
+ *
+ * @author <YOUR UUN>
+ */
+public class HumanPlayer implements IPlayer
+{
+	public IModel model;
+	public byte playerId;
+
+	// The constructor is called when the player is selected from the game menu.
+	public HumanPlayer()
+	{
+		// You can leave this empty.
+	}
+	
+	// This method is called when a new game is started or loaded.
+	public void prepareForGameStart(IModel model, byte playerId)
+	{
+		// You can leave this empty.
+		this.model = model;
+		// 新添加的逻辑
+		this.playerId = playerId;
+	}
+	
+	// This method is called to ask the player to take their turn.
+	// The move they choose should be returned from this method.
+	public int chooseMove()
+	{
+		int move = readIntFromUser();
+		// Until you have implemented this player, it will always concede.
+//		return IModel.CONCEDE_MOVE;
+		return move;
+		// Remove the above return statement, ask the user to enter a move and return that instead.
+		// The user should enter the index of the column into which they want to put their next piece.
+		// They can also enter -1 if they really do want to concede.
+	}
+}
