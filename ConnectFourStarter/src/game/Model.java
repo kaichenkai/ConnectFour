@@ -49,6 +49,8 @@ public class Model implements IModel {
         ROWS = settings.nrRows;
         MIN_STREAK_LENGTH = settings.minStreakLength;
         //
+        turn = 0;
+        //
         row = 0;
         col = 0;
         // This method still needs to be extended.
