@@ -50,6 +50,7 @@ public class Model implements IModel {
         MIN_STREAK_LENGTH = settings.minStreakLength;
         //
         turn = 0;
+        winner = 0;
         //
         row = 0;
         col = 0;
